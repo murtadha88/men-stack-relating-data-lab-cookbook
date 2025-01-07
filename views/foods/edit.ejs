@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new Item</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Edit <%=item.name%></h1>
+    <form action="/users/<%=user._id%>/foods/<%=item._id%>?_method=Put" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<%=item.name%>" required> <br>
+        <button type="submit">Edit</button>
+    </form>
+</body>
+</html>
