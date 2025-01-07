@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title><%=currentUser.username%></title>
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Pantry Items</h1>
+    <h3><%=currentUser.username%> Pantry</h3>
     <ul>
         <%pantry.forEach((item)=> {%>
             <li><%=item.name%></li>

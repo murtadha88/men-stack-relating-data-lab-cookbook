@@ -14,6 +14,7 @@ router.get("/:userId/show", async (req,res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
         res.render("users/show.ejs", {
+            currentUser,
             pantry:currentUser.pantry,
         });
 
